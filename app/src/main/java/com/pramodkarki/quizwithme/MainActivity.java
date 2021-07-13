@@ -1,9 +1,13 @@
 package com.pramodkarki.quizwithme;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.pramodkarki.quizwithme.databinding.ActivityMainBinding;
 
@@ -33,5 +37,19 @@ public class MainActivity extends AppCompatActivity {
         binding.categoryList.setLayoutManager(new GridLayoutManager(this, 2));
         binding.categoryList.setAdapter(adapter);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.home_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.wallet) {
+            Toast.makeText(MainActivity.this, "Wallet is clicked!!", Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
