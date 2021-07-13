@@ -119,4 +119,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/button_1"
+        android:drawableLeft="@drawable/spin"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:text="Spin Wheel"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/button_2"
+        android:drawableLeft="@drawable/share"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:text="Invite Friends"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"
+        app:drawableTint="@color/color_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
